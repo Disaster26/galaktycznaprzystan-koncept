@@ -7,7 +7,7 @@
   /* menu mobilne */
   var pody = [].slice.call(menu.querySelectorAll('.pod-btn'));
   function zwinPody(oprocz) {
-    pody.forEach(function (b) { if (b !== oprocz) b.setAttribute('aria-expanded', 'false'); });
+    pody.forEach(function (b) { if (b !== oprocz) { b.setAttribute('aria-expanded', 'false'); b.closest('.pod').classList.remove('otwarte'); } });
   }
   function zamknij() {
     menu.classList.remove('otw');
@@ -31,12 +31,19 @@
       var otw = b.getAttribute('aria-expanded') !== 'true';
       zwinPody(b);
       b.setAttribute('aria-expanded', String(otw));
+      b.closest('.pod').classList.toggle('otwarte', otw);
       /* po najechaniu myszą podmenu już jest widoczne - kliknięcie nie powinno go chować */
-      if (!otw && !menu.classList.contains('otw') && b.parentNode.matches(':hover') && window.matchMedia('(hover:hover)').matches) b.setAttribute('aria-expanded', 'true');
+      if (!otw && !menu.classList.contains('otw') && b.closest('.pod').matches(':hover') && window.matchMedia('(hover:hover)').matches) { b.setAttribute('aria-expanded', 'true'); b.closest('.pod').classList.add('otwarte'); }
     });
   });
   document.addEventListener('click', function (e) { if (!menu.classList.contains('otw') && !e.target.closest('.pod')) zwinPody(); });
-  menu.addEventListener('click', function (e) { if (e.target.closest('a')) { zamknij(); } });
+  menu.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    zamknij();
+    /* po wyborze pozycji podmenu chowamy je (fokus nie trzyma go otwartego) */
+    if (a.closest('.pod')) a.blur();
+  });
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
     if (menu.classList.contains('otw')) { zamknij(); burger.focus(); return; }
@@ -149,6 +156,10 @@
     odswiez();
     window.addEventListener('resize', odswiez);
   });
+
+  /* zdjęcia: bez menu kontekstowego i przeciągania (utrudnia kopiowanie) */
+  document.addEventListener('contextmenu', function (e) { if (e.target.closest('img, picture, .fotki, .rys')) e.preventDefault(); });
+  document.addEventListener('dragstart', function (e) { if (e.target.tagName === 'IMG') e.preventDefault(); });
 
   /* formularz pokazowy */
   var form = document.getElementById('form');

@@ -9,8 +9,8 @@
 <meta name="theme-color" content="#5B3F86">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2040%2040%22%3E%3Crect%20width%3D%2240%22%20height%3D%2240%22%20rx%3D%229%22%20fill%3D%22%23fff%22/%3E%3Cellipse%20cx%3D%2220%22%20cy%3D%2221%22%20rx%3D%2214%22%20ry%3D%2216.5%22%20fill%3D%22none%22%20stroke%3D%22%237F6699%22%20stroke-width%3D%223%22/%3E%3Cellipse%20cx%3D%2220%22%20cy%3D%2222%22%20rx%3D%227.5%22%20ry%3D%229.5%22%20fill%3D%22%23A7D194%22/%3E%3Ccircle%20cx%3D%2220%22%20cy%3D%2219.5%22%20r%3D%223.6%22%20fill%3D%22%235B3F86%22/%3E%3C/svg%3E">
 <link rel="preload" href="fonts/lora-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="img/hero-woda-1100.webp" as="image" media="(max-width:899px)">
-<link rel="preload" href="img/hero-woda-2000.webp" as="image" media="(min-width:900px)">
+<link rel="preload" href="img/hero-lawenda-1100.webp" as="image" media="(max-width:899px)">
+<link rel="preload" href="img/hero-lawenda-2000.webp" as="image" media="(min-width:900px) and (max-width:1499px)">
 <link rel="stylesheet" href="style.css">
 <style>
 .wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
@@ -35,19 +35,51 @@
       <span class="marka-t"><b>Galaktyczna Przystań Mocy</b><small>Monika Grzegorczyk</small></span>
     </a>
     <nav class="menu" id="menu" aria-label="Menu główne">
-      <a href="#sesje">Sesje</a>
-      <a href="#aura">Rysunek aury</a>
-      <a href="#o-mnie">O mnie</a>
-      <a href="#szkola">Szkoła Języka Serca</a>
-      <a href="#warunki">Warunki i ceny</a>
-      <a href="#kontakt">Kontakt</a>
+     <ul class="menu-lista">
+      <li class="ma tylko-mob"><a href="#top">Strona główna</a></li>
+      <li class="ma"><a href="#o-mnie">O mnie</a></li>
+      <li class="ma"><a href="#szkola">Szkoła Języka Serca</a></li>
+      <li class="ma pod">
+        <button class="pod-btn" type="button" aria-expanded="false" aria-controls="pod-oferta">Oferta<i class="strz" aria-hidden="true"></i></button>
+        <ul class="pod-lista" id="pod-oferta">
+          <li><a href="#szamanskie">Prowadzenie szamańskie</a></li>
+          <li><a href="#bioenergoterapia">Uzdrawianie energią z przestrzeni serca</a></li>
+          <li><a href="#aura">Rysunek aury z interpretacją</a></li>
+          <li><a href="#misy">Uzdrawianie dźwiękiem mis tybetańskich i gongu</a></li>
+          <li><a href="#zwierzeta">Łączność ze zwierzętami</a></li>
+          <li><a href="#malowanie">Malowanie obrazów energetycznych na ceramice, szkle, płótnie</a></li>
+        </ul>
+      </li>
+      <li class="ma pod">
+        <button class="pod-btn" type="button" aria-expanded="false" aria-controls="pod-galeria">Galeria<i class="strz" aria-hidden="true"></i></button>
+        <ul class="pod-lista" id="pod-galeria">
+          <li><a href="#aura">Rysunki aury</a></li>
+          <li><a href="#spotkania">Wykłady, warsztaty, spotkania</a></li>
+          <li><a href="#malowanie">Malowanie obrazów energetycznych na ceramice, szkle, płótnie</a></li>
+        </ul>
+      </li>
+      <li class="ma pod">
+        <button class="pod-btn" type="button" aria-expanded="false" aria-controls="pod-polecane">Polecane<i class="strz" aria-hidden="true"></i></button>
+        <ul class="pod-lista" id="pod-polecane">
+          <li><a href="https://www.galaktycznaprzystan.pl/literaturaciekawe-linki/muzyka-inspiracji/" target="_blank" rel="noopener">Muzyka inspiracji</a></li>
+          <li><a href="https://www.galaktycznaprzystan.pl/literaturaciekawe-linki/filmy-inspiracji/" target="_blank" rel="noopener">Filmy inspiracji</a></li>
+          <li><a href="https://www.galaktycznaprzystan.pl/literaturaciekawe-linki/literatura/" target="_blank" rel="noopener">Literatura</a></li>
+        </ul>
+      </li>
+      <li class="ma"><a href="#opinie">Listy, rekomendacje</a></li>
+      <li class="ma"><a href="#warunki">Warunki i ceny</a></li>
+      <li class="ma"><a href="#media">Przystań w mediach</a></li>
+      <li class="ma"><a href="#kontakt">Kontakt</a></li>
+      <li class="ma tylko-mob"><a href="https://www.facebook.com/galaktycznaprzystan/" target="_blank" rel="noopener">Facebook</a></li>
+     </ul>
       <a class="menu-tel" href="tel:+48508566867">Zadzwoń: 508 566 867</a>
     </nav>
+    <a class="fb-top" href="https://www.facebook.com/galaktycznaprzystan/" target="_blank" rel="noopener">Facebook</a>
     <a class="tel-top" href="tel:+48508566867" aria-label="Zadzwoń: 508 566 867">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg>
       <span>508 566 867</span>
     </a>
-    <button class="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <button class="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><span class="burger-k" aria-hidden="true"><span></span><span></span><span></span></span><span class="burger-t">Menu</span></button>
   </div>
 </header>
 
@@ -56,9 +88,9 @@
 <section class="hero" aria-labelledby="h1">
   <div class="hero-foto">
     <picture>
-      <source media="(min-width:1500px)" srcset="img/hero-woda-2800.webp">
-      <source media="(min-width:900px)" srcset="img/hero-woda-2000.webp">
-      <img src="img/hero-woda-1100.webp" width="1100" height="731" alt="Górskie jeziorko pod wodospadem, w wodzie kąpiąca się osoba" fetchpriority="high">
+      <source media="(min-width:1500px)" srcset="img/hero-lawenda-2800.webp">
+      <source media="(min-width:900px)" srcset="img/hero-lawenda-2000.webp">
+      <img src="img/hero-lawenda-1100.webp" width="1100" height="881" alt="Kwitnące pole lawendy, ścieżka między krzewami" fetchpriority="high">
     </picture>
     <figure class="med">
       <img src="img/monika-woda.webp" width="648" height="834" alt="Monika Grzegorczyk nad wodą">
@@ -83,7 +115,7 @@
       <p>Możesz przyjść, powiedzieć o tym, co Cię trapi, a zaproponuję najlepsze dla Ciebie rozwiązanie i dalszą współpracę. Większość sesji prowadzę także na odległość - przez telefon lub komunikator.</p>
     </div>
     <div class="karty">
-      <article class="karta">
+      <article class="karta" id="szamanskie">
         <div class="fotki karuzela" data-karuzela aria-roledescription="galeria" aria-label="Prowadzenie szamańskie"><div class="tor"><img src="img/szaman-drzewo.webp" width="900" height="1200" loading="lazy" style="object-position:50% 12%" alt="Monika Grzegorczyk w lesie, przy drzewie"><img src="img/szaman-las.webp" width="450" height="576" loading="lazy" alt="Słońce prześwitujące przez korony drzew"></div><div class="kar-nav mini"><button class="kar-p" aria-label="Poprzednie zdjęcie">&#8249;</button><span class="kar-licz" aria-live="polite">1 / 2</span><button class="kar-n" aria-label="Następne zdjęcie">&#8250;</button></div></div>
         <div class="karta-t">
           <p class="karta-gdzie">na odległość</p>
@@ -92,7 +124,7 @@
           <p class="karta-cena">400 zł · do 1 h</p>
         </div>
       </article>
-      <article class="karta">
+      <article class="karta" id="bioenergoterapia">
         <div class="fotki karuzela" data-karuzela aria-roledescription="galeria" aria-label="Bioenergoterapia i uzdrawianie praniczne"><div class="tor"><img src="img/dlonie-magnolia.webp" width="692" height="431" loading="lazy" alt="Dłonie wokół kwiatu magnolii"><img src="img/dlonie-kwiat.webp" width="600" height="386" loading="lazy" alt="Dłonie wokół kwiatu różanecznika"></div><div class="kar-nav mini"><button class="kar-p" aria-label="Poprzednie zdjęcie">&#8249;</button><span class="kar-licz" aria-live="polite">1 / 2</span><button class="kar-n" aria-label="Następne zdjęcie">&#8250;</button></div></div>
         <div class="karta-t">
           <p class="karta-gdzie">także na odległość</p>
@@ -101,7 +133,7 @@
           <p class="karta-cena">400 zł · do 1 h · krótka sesja 130 zł</p>
         </div>
       </article>
-      <article class="karta">
+      <article class="karta" id="misy">
         <div class="fotki karuzela" data-karuzela aria-roledescription="galeria" aria-label="Dźwięk mis tybetańskich i gongu"><div class="tor"><img src="img/misy-sesja.webp" width="803" height="570" loading="lazy" alt="Monika Grzegorczyk gra na misach tybetańskich w ogrodzie"><img src="img/misy-gong.webp" width="900" height="534" loading="lazy" alt="Gong i misy podczas koncertu w ogrodzie"><img src="img/misy-koncert.webp" width="900" height="568" loading="lazy" alt="Uczestnicy koncertu mis odpoczywają na matach"><img src="img/misy-zestaw.webp" width="700" height="1193" loading="lazy" alt="Gong, misy tybetańskie i pałki"><img src="img/misy-blisko.webp" width="452" height="300" loading="lazy" alt="Misy tybetańskie z bliska"></div><div class="kar-nav mini"><button class="kar-p" aria-label="Poprzednie zdjęcie">&#8249;</button><span class="kar-licz" aria-live="polite">1 / 5</span><button class="kar-n" aria-label="Następne zdjęcie">&#8250;</button></div></div>
         <div class="karta-t">
           <p class="karta-gdzie">sesja 1 h 15 min</p>
@@ -110,7 +142,7 @@
           <p class="karta-cena">400 zł · 1 h 15 min</p>
         </div>
       </article>
-      <article class="karta">
+      <article class="karta" id="zwierzeta">
         <div class="fotki karuzela" data-karuzela aria-roledescription="galeria" aria-label="Łączność ze zwierzętami"><div class="tor"><img src="img/kot-misio.webp" width="515" height="698" loading="lazy" style="object-position:50% 60%" alt="Kot śpiący w trawie"><img src="img/kot-sen.webp" width="579" height="347" loading="lazy" alt="Kot przeciągający się we śnie"></div><div class="kar-nav mini"><button class="kar-p" aria-label="Poprzednie zdjęcie">&#8249;</button><span class="kar-licz" aria-live="polite">1 / 2</span><button class="kar-n" aria-label="Następne zdjęcie">&#8250;</button></div></div>
         <div class="karta-t">
           <p class="karta-gdzie">tylko na odległość</p>
@@ -119,7 +151,7 @@
           <p class="karta-cena">400 zł · do 1 h</p>
         </div>
       </article>
-      <article class="karta">
+      <article class="karta" id="malowanie">
         <div class="fotki karuzela" data-karuzela aria-roledescription="galeria" aria-label="Malowanie na ceramice, szkle i płótnie"><div class="tor"><img src="img/cer-kubek1.webp" width="700" height="866" loading="lazy" alt="Kubek malowany w kolorowe kwiaty"><img src="img/cer-kubek3.webp" width="468" height="505" loading="lazy" alt="Turkusowy kubek z malowaną mandalą"><img src="img/cer-butelka.webp" width="483" height="491" loading="lazy" alt="Butelka malowana w kwiaty"><img src="img/cer-sloj.webp" width="441" height="405" loading="lazy" alt="Słoik z zieloną mandalą"><img src="img/obraz-slonce.webp" width="400" height="572" loading="lazy" alt="Obraz energetyczny ze słońcem"><img src="img/obraz-gory.webp" width="621" height="552" loading="lazy" alt="Obraz energetyczny z górami nad wodą"></div><div class="kar-nav mini"><button class="kar-p" aria-label="Poprzednie zdjęcie">&#8249;</button><span class="kar-licz" aria-live="polite">1 / 6</span><button class="kar-n" aria-label="Następne zdjęcie">&#8250;</button></div></div>
         <div class="karta-t">
           <p class="karta-gdzie">także na zamówienie</p>
@@ -181,7 +213,7 @@
         <li><b>od 2009</b> autorskie warsztaty „Życie wg boskiego projektu”, od 2021 Szkoła Języka Serca online</li>
         <li><b>od 2025</b> Mistrz Medycyny Energetycznej po Szkole Uzdrawiania Szamańskiego dr. Alberto Villoldo, joginka inicjowana w I stopień Atma Kriya Yogi</li>
       </ul>
-      <p class="o-media">Rozmowy o rysunku aury i masażu dźwiękiem: Radio Łódź, gaja.tv, porozmawiajmy.tv.</p>
+      <p class="o-media" id="media">Rozmowy o rysunku aury i masażu dźwiękiem: Radio Łódź, gaja.tv, porozmawiajmy.tv.</p>
     </div>
   </div>
 </section>

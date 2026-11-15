@@ -198,3 +198,19 @@
     el.forEach(function (x) { x.classList.add('wj'); io.observe(x); });
   }
 })();
+
+/* 15.11: baner cookies (Akceptuje / Odrzucam od razu na pierwszym ekranie) */
+(function () {
+  var cb = document.getElementById('cb'); if (!cb) return;
+  var K = 'gp_cookies';
+  function get() { try { return localStorage.getItem(K); } catch (e) { return null; } }
+  function set(v) { try { localStorage.setItem(K, v); } catch (e) {} }
+  if (!get()) cb.hidden = false;
+  cb.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-zgoda]'); if (!b) return;
+    set(b.getAttribute('data-zgoda')); cb.hidden = true;
+  });
+  [].forEach.call(document.querySelectorAll('.cb-ust'), function (b) {
+    b.addEventListener('click', function () { cb.hidden = false; var f = cb.querySelector('.cb-btn'); if (f) f.focus(); });
+  });
+})();

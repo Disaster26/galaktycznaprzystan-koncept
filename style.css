@@ -664,3 +664,26 @@ p{margin:0 0 .9em}
 @media (max-width:599px){.inne-siatka{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.inne-siatka .inna-t{font-size:14.5px;padding:10px 11px 12px}}
 .inna-f img[src*="/aura/"]{object-fit:contain;background:var(--noc2)}
 @media (max-width:599px){.inne-siatka .inna:last-child:nth-child(odd){grid-column:1/-1}.inne-siatka .inna:last-child:nth-child(odd) .inna-f{aspect-ratio:16/9}}
+
+/* 15.11: baner cookies - "Odrzucam" i "Akceptuję" od razu, rownorzedne */
+.cb{position:fixed;left:12px;right:12px;bottom:12px;z-index:60;display:flex;justify-content:center}
+.cb[hidden]{display:none}
+.cb-in{background:#fff;color:var(--ink);border-radius:16px;box-shadow:0 10px 40px rgba(46,33,72,.28);border-top:4px solid var(--fiolet);padding:16px 18px;max-width:880px;width:100%;display:flex;gap:16px 22px;align-items:center}
+.cb-t{margin:0;font-size:15px;line-height:1.5}
+.cb-t b{display:block;color:var(--fiolet);font-family:var(--serif);font-size:17px;margin-bottom:2px}
+.cb-b{display:flex;gap:10px;flex:0 0 auto}
+.cb-btn{font:inherit;font-weight:700;font-size:15px;min-height:46px;padding:0 20px;border-radius:999px;border:2px solid var(--fiolet);background:var(--fiolet);color:#fff;cursor:pointer;min-width:126px}
+.cb-btn:hover{background:var(--fiolet-h);border-color:var(--fiolet-h)}
+.cb-ust{font:inherit;color:inherit;background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+@media (max-width:699px){.cb{left:8px;right:8px;bottom:8px}.cb-in{flex-direction:column;align-items:stretch;padding:14px 14px 12px}.cb-t{font-size:14px}.cb-b .cb-btn{flex:1 1 0;min-width:0}}
+.polec-bez li{padding:12px 0;line-height:1.4}
+.propozycja-info{margin:0;padding:12px 16px;border-left:4px solid var(--magenta);background:#fff;border-radius:8px;font-size:15.5px}
+.stron{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:36px}
+.stron a,.stron span{min-width:44px;height:44px;padding:0 14px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:700;text-decoration:none;background:#fff;color:var(--fiolet)}
+.stron span{background:var(--fiolet);color:#fff}
+.stron a:hover{background:var(--fiolet-h);color:#fff}
+.fotki .tor img[src*="/aura/"]{object-fit:contain;background:var(--noc2)}
+/* 15.11: stare wpisy (dlugie linki, ciagi znakow) bez przewijania w bok na telefonie */
+.art,.art-uklad>*{min-width:0}
+.art-tresc{overflow-wrap:anywhere}
+.art-tresc img,.art-tresc table{max-width:100%;height:auto}

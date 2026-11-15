@@ -328,7 +328,7 @@ p{margin:0 0 .9em}
 .chipy li{background:#fff;color:var(--fiolet);border-radius:999px;padding:7px 15px;font-size:15.5px;font-weight:600}
 
 /* pas z cytatem */
-.cytat{color:#fff;padding:78px 0;position:relative;overflow:hidden}
+.cytat{color:#fff;padding:78px 0;position:relative;overflow:hidden;min-height:400px;display:flex;align-items:center}
 .cy-fiolet{background:#5B3F86}.cy-noc{background:#2E2148}.cy-malina{background:#A3285A}.cy-las{background:#2F5B3E}
 .cytat-in{position:relative}
 .cytat-luki{position:absolute;right:-60px;top:50%;width:300px;height:300px;transform:translateY(-50%);opacity:.9}
@@ -594,7 +594,7 @@ p{margin:0 0 .9em}
   .tf-rys{max-width:280px}
   .lista-2{columns:1}
   .kol-3{grid-template-columns:minmax(0,1fr);gap:30px}
-  .cytat{padding:54px 0}
+  .cytat{padding:54px 0;min-height:280px}
   .cytat-luki{width:200px;height:200px;right:-90px;opacity:.55}
   .cta-pas{padding:44px 0}
   .cta-btn{width:100%}

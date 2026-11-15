@@ -626,3 +626,30 @@ p{margin:0 0 .9em}
   .med{width:min(20vw,240px);bottom:36px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.pnag-foto img{animation:none}.js .wj{opacity:1;transform:none}}
+/* 15.11 podglad znaku lapacz (propozycja B po poprawkach) */
+.znak.znak-lapacz{width:auto;height:64px}
+.logo-nowy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:30px;align-items:start}
+.logo-nowy .logo-svg{width:min(250px,72%)}
+.pod-k{background:#fff;border-radius:18px;padding:26px 28px;display:flex;flex-direction:column;gap:16px}
+.pod-k h3{font-family:var(--serif);font-weight:600;color:var(--fiolet);font-size:21px;margin:0}
+.pod-k p{margin:0;color:var(--ink2)}
+.nag-mock{display:flex;align-items:center;gap:12px;background:var(--bg);border-radius:12px 12px 0 0;padding:6px 18px;color:var(--fiolet);height:76px}
+.nag-mock .marka-t b{font-family:var(--serif);font-weight:600;font-size:19px}
+.nag-mock-pas{height:14px;background:var(--fiolet);border-bottom:3px solid var(--zielen);border-radius:0 0 12px 12px}
+.nag-mock .znak-lapacz{height:64px}
+.karta-mock{background:#DEE1E6;border-radius:12px;padding:8px 10px 0;display:flex;gap:8px;align-items:flex-end}
+.karta-mock .kt{display:flex;align-items:center;gap:8px;background:#fff;border-radius:9px 9px 0 0;padding:9px 14px;font:13px/1.2 Arial,sans-serif;color:#202124;min-width:0;max-width:300px}
+.karta-mock .kt span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.karta-mock .kt2{background:transparent;color:#5f6368}
+.karta-mock img{width:16px;height:16px;flex:none}
+.google-mock{background:#fff;border:1px solid #DADCE0;border-radius:12px;padding:16px 18px;font-family:Arial,sans-serif}
+.google-mock .gm-g{display:flex;align-items:center;gap:10px}
+.google-mock .gm-ik{width:28px;height:28px;border-radius:50%;background:#F1F3F4;display:grid;place-items:center;flex:none}
+.google-mock .gm-ik img{width:18px;height:18px}
+.google-mock .gm-n{font-size:14px;color:#202124;line-height:1.3}
+.google-mock .gm-u{font-size:12px;color:#4d5156}
+.google-mock .gm-t{font-size:19px;color:#1a0dab;margin:6px 0 4px;line-height:1.3}
+.google-mock .gm-o{font-size:14px;color:#4d5156;line-height:1.5}
+.fav-rozm{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}
+.fav-rozm figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:13px;color:var(--ink2)}
+@media (max-width:899px){.znak.znak-lapacz{height:54px}.logo-nowy{grid-template-columns:minmax(0,1fr)}.nag-mock{padding:6px 12px;height:68px}.nag-mock .znak-lapacz{height:56px}.nag-mock .marka-t b{font-size:16px}}

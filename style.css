@@ -501,6 +501,8 @@ p{margin:0 0 .9em}
   .menu.otw .ma>a::after,.menu.otw .pod-a::after{display:none}
   .menu.otw .ma>a.akt{background:none;justify-content:flex-start}
   .menu.otw .ma>a.akt::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--zielen);box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--fiolet-b);margin:0 14px 3px 2px}
+  .menu.otw .pod.akt>.pod-glowa .pod-a{justify-content:flex-start}
+  .menu.otw .pod.akt>.pod-glowa .pod-a::before{content:"";display:inline-block;flex:none;width:9px;height:9px;border-radius:50%;background:var(--zielen);box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--fiolet-b);margin:0 14px 3px 2px}
   .menu.otw .strz{width:10px;height:10px;margin-right:8px}
   .menu.otw .pod-lista{position:static;opacity:1;visibility:visible;transform:none;display:none;box-shadow:none;border:0;border-left:3px solid var(--fiolet-b);border-radius:0;min-width:0;max-width:none;margin:0 0 14px 4px;padding:2px 0;background:#fff;transition:none}
   .menu.otw .pod:hover>.pod-lista,.menu.otw .pod:focus-within>.pod-lista{display:none}

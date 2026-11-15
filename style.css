@@ -653,3 +653,12 @@ p{margin:0 0 .9em}
 .fav-rozm{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}
 .fav-rozm figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:13px;color:var(--ink2)}
 @media (max-width:899px){.znak.znak-lapacz{height:54px}.logo-nowy{grid-template-columns:minmax(0,1fr)}.nag-mock{padding:6px 12px;height:68px}.nag-mock .znak-lapacz{height:56px}.nag-mock .marka-t b{font-size:16px}}
+/* 15.11 uwagi klientki: inne sesje w calosci (siatka zamiast przewijania), rysunki aury bez ucinania, koty w calosci */
+.inne-siatka{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:16px}
+.inne-siatka .inna{width:auto}
+.tf-rys img{aspect-ratio:auto;height:auto;object-fit:contain}
+.rys-b img{object-fit:contain}
+.wpis-f-cala{background:#fff}
+.wpis-f-cala img{object-fit:contain;padding:8px}
+@media (max-width:1100px){.inne-siatka{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:599px){.inne-siatka{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.inne-siatka .inna-t{font-size:14.5px;padding:10px 11px 12px}}

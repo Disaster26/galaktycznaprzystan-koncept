@@ -239,6 +239,8 @@ p{margin:0 0 .9em}
 .s-kol a{display:block;color:#3A2B3D;text-decoration:none;font-size:15.5px;padding:4px 0;word-break:break-word}
 .s-kol a:hover{color:var(--fiolet)}
 .stopka-dol{display:flex;justify-content:space-between;align-items:center;gap:14px 24px;flex-wrap:wrap;margin-top:40px;padding-top:20px;border-top:1px solid rgba(58,43,61,.18);font-size:14.5px}
+.s-nota{position:relative;margin:32px 0 0;padding-left:28px;font-size:13.5px;line-height:1.55;color:#3A2B3D;max-width:900px}
+.s-nota::before{content:"";position:absolute;left:0;top:2px;width:18px;height:18px;border-radius:50%;border:2px solid var(--fiolet);box-shadow:inset 0 0 0 3px #fff,inset 0 0 0 9px var(--fiolet-b)}
 .stopka-dol a{color:inherit}
 
 /* pasek mobilny */

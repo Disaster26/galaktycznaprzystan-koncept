@@ -223,6 +223,9 @@ p{margin:0 0 .9em}
 .pole input:focus,.pole select:focus,.pole textarea:focus{outline:2px solid var(--fiolet-b);outline-offset:0;border-color:var(--fiolet-b)}
 .zgoda{display:flex;gap:10px;font-size:14.5px;color:var(--ink2);line-height:1.45;align-items:flex-start}
 .zgoda input{width:20px;height:20px;margin:1px 0 0;flex:none;accent-color:var(--fiolet)}
+.zgoda-w{grid-column:1/-1}
+.zgoda a{color:var(--fiolet);text-decoration:underline;text-underline-offset:2px}
+.zgoda-blad{margin:8px 0 0 30px;color:#9B1C3A;font-size:14.5px;font-weight:600}
 .form .btn{justify-self:start}
 .form-info{margin:0;color:var(--zielen-d);font-weight:600}
 
@@ -689,3 +692,15 @@ p{margin:0 0 .9em}
 .art,.art-uklad>*{min-width:0}
 .art-tresc{overflow-wrap:anywhere}
 .art-tresc img,.art-tresc table{max-width:100%;height:auto}
+/* 18.11 prowadzenie szamanskie: mniejsze zdjecie klientki + liscie pod nim */
+.tf-duo{grid-template-columns:minmax(0,1fr) 330px}
+.duo-foto{display:grid;gap:16px}
+.duo-foto .tf-foto img{height:auto;max-height:none;display:block}
+.duo-osoba img{aspect-ratio:4/5;object-position:50% 45%}
+.duo-lisc img{aspect-ratio:16/10;object-position:50% 50%}
+@media (max-width:899px){
+  .tf-duo{grid-template-columns:minmax(0,1fr)}
+  .duo-foto{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .duo-foto .tf-foto{border-radius:14px}
+  .duo-lisc img{aspect-ratio:4/5}
+}

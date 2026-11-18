@@ -327,7 +327,8 @@
       <div class="pole"><label for="f-rodzaj">Rodzaj sesji</label>
         <select id="f-rodzaj" name="rodzaj"><option>Sesja szamańska</option><option>Sesja bio / uzdrawianie praniczne</option><option>Rysunek aury z interpretacją</option><option>Masaż dźwiękiem mis i gongu</option><option>Sesja dla zwierząt</option><option>Konsultacja na ścieżce duchowej</option><option>Malowanie na zamówienie</option><option>Inne pytanie</option></select></div>
       <div class="pole"><label for="f-tresc">Wiadomość</label><textarea id="f-tresc" name="tresc" rows="4"></textarea></div>
-      <label class="zgoda"><input type="checkbox" required> <span>Zgadzam się na przetwarzanie moich danych w celu odpowiedzi na wiadomość. Administratorem danych jest Fundacja Rozwoju Przedsiębiorczości „Twój StartUp” (szczegóły w polityce prywatności).</span></label>
+      <div class="zgoda-w"><label class="zgoda" for="f-zgoda"><input type="checkbox" id="f-zgoda" name="zgoda" value="tak" required aria-describedby="f-zgoda-blad"> <span>Wyrażam zgodę na przetwarzanie moich danych osobowych podanych w formularzu w celu odpowiedzi na wiadomość (pole wymagane). Administratorem danych jest Fundacja Rozwoju Przedsiębiorczości „Twój StartUp”. Szczegóły w <a href="../../rodo/">polityce prywatności</a>.</span></label>
+      <p class="zgoda-blad" id="f-zgoda-blad" role="alert" hidden>Aby wysłać wiadomość, zaznacz zgodę na przetwarzanie danych.</p></div>
       <button class="btn" type="submit">Wyślij wiadomość</button>
       <p class="form-info" role="status" hidden>To podgląd strony - formularz niczego nie wysyła.</p>
     </form>

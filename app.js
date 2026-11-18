@@ -142,10 +142,20 @@
 
   /* formularz pokazowy */
   var form = document.getElementById('form');
-  if (form) form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    form.querySelector('.form-info').hidden = false;
-  });
+  if (form) {
+    var zg = form.querySelector('#f-zgoda'), zgBlad = form.querySelector('.zgoda-blad'), info = form.querySelector('.form-info');
+    if (zg) zg.addEventListener('change', function () { if (zg.checked) { zgBlad.hidden = true; zg.removeAttribute('aria-invalid'); } });
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      info.hidden = true;
+      if (zg && !zg.checked) {
+        zgBlad.hidden = false; zg.setAttribute('aria-invalid', 'true'); zg.focus();
+        return;
+      }
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      info.hidden = false;
+    });
+  }
 
   /* rysunki aury: umiarkowane powiększenie (bez pełnego ekranu), strzałki, klawiatura, przesunięcie palcem */
   var lb = document.getElementById('lb');

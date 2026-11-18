@@ -153,6 +153,9 @@
         return;
       }
       if (!form.checkValidity()) { form.reportValidity(); return; }
+      /* 18.11: druga, dobrowolna zgoda - w zgloszeniu wyrazny dopisek dla wlascicielki */
+      var mk = form.querySelector('#f-zgoda-mk'), mkInfo = info.querySelector('.form-info-mk');
+      if (mkInfo) mkInfo.textContent = 'W mailu ze zgłoszeniem będzie dopisek: ZGODA MARKETINGOWA: ' + (mk && mk.checked ? 'TAK' : 'NIE') + '.';
       info.hidden = false;
     });
   }
